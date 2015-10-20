@@ -49,7 +49,7 @@ def parse_star_parameters(line, star):
     """
     parameters = line.split(" ")
     if parameters[0] == "Star":
-        Star.R = int(parameters[1])
+        Star.R = float(parameters[1])
         Star.color = str(parameters[2])
         Star.m = float(parameters[3])
         Star.x = float(parameters[4])
@@ -75,7 +75,7 @@ def parse_planet_parameters(line, planet):
     """
     parameters = line.split(" ")
     if parameters[0] == "Planet":
-        Planet.R = int(parameters[1])
+        Planet.R = float(parameters[1])
         Planet.color = str(parameters[2])
         Planet.m = float(parameters[3])
         Planet.x = float(parameters[4])
