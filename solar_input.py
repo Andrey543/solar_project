@@ -49,13 +49,14 @@ def parse_star_parameters(line, star):
     """
     parameters = line.split(" ")
     if parameters[0] == "Star":
-        Star.R = float(parameters[1])
-        Star.color = str(parameters[2])
-        Star.m = float(parameters[3])
-        Star.x = float(parameters[4])
-        Star.y = float(parameters[5])
-        Star.Vx = float(parameters[6])
-        Star.Vy = float(parameters[7])
+        star.R = float(parameters[1])
+        star.color = str(parameters[2])
+        star.m = float(parameters[3])
+        star.x = float(parameters[4])
+        star.y = float(parameters[5])
+        star.Vx = float(parameters[6])
+        star.Vy = float(parameters[7])
+        print(star.x, star.y)
     #pass  00IXME: not done yet fixed
 
 def parse_planet_parameters(line, planet):
@@ -75,13 +76,13 @@ def parse_planet_parameters(line, planet):
     """
     parameters = line.split(" ")
     if parameters[0] == "Planet":
-        Planet.R = float(parameters[1])
-        Planet.color = str(parameters[2])
-        Planet.m = float(parameters[3])
-        Planet.x = float(parameters[4])
-        Planet.y = float(parameters[5])
-        Planet.Vx = float(parameters[6])
-        Planet.Vy = float(parameters[7])
+        planet.R = float(parameters[1])
+        planet.color = str(parameters[2])
+        planet.m = float(parameters[3])
+        planet.x = float(parameters[4])
+        planet.y = float(parameters[5])
+        planet.Vx = float(parameters[6])
+        planet.Vy = float(parameters[7])
     #pass   FIXME: not done yet...fixed
 
 
