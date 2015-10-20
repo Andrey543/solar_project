@@ -41,6 +41,8 @@ def move_space_object(body, dt):
     body.y += body.Vy*dt+ay*dt**2/2 # FIXME: не понимаю как менять...
     body.Vy += ay*dt
     # FIXME: not done recalculation of y coordinate!
+    status=open('status.txt','a')
+    print( "%s %f %f %f %f" % (body.color,body.x,body.y,body.Vx,body.Vy ), file=status)
 
 
 def recalculate_space_objects_positions(space_objects, dt):
@@ -56,6 +58,7 @@ def recalculate_space_objects_positions(space_objects, dt):
         calculate_force(body, space_objects)
     for body in space_objects:
         move_space_object(body, dt)
+    
 
 
 if __name__ == "__main__":
